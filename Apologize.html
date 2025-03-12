@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry My Love 💖</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive;
+            background: #ffe6f0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(255,105,180,0.2);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #ff69b4;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+        }
+
+        .capoo {
+            width: 250px;
+            margin: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border-radius: 15px;
+        }
+
+        .capoo:hover {
+            transform: rotate(-5deg) scale(1.05);
+            box-shadow: 0 0 15px rgba(255,105,180,0.3);
+        }
+
+        .message {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+            margin: 20px 0;
+            background: #fff5f9;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff69b4, #ff85c2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin: 20px;
+            box-shadow: 0 4px 15px rgba(255,105,180,0.3);
+        }
+
+        button:hover {
+            transform: scale(1.1) rotate(3deg);
+            box-shadow: 0 6px 20px rgba(255,105,180,0.4);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐾 Forgive This Silly Capoo? 🐾</h1>
+        
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG96MmplNDU4cjhqcmtvNTJqYm1pcXhwc3V5b2RweG1xZGszaHVycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3og0IG0skAiznZQLde/giphy.gif" 
+             class="capoo floating" 
+             alt="Apology Capoo"
+             id="capoo">
+
+            
+        <div class="message">
+            <p>My dearest 🌸,</p>
+            <p>I just wanted to say I’m really sorry if my teasing upset you. 😿</p>
+            <p>I never meant to hurt your feelings—I was just joking around, but I realize now that I may have gone too far 😔</p>
+            <p>You're my favorite person in the whole universe 🌌💖</p>
+            <p>Will you let this bug cat make it up to you? 🐛🐱</p>
+        </div>
+
+        <button onclick="throwConfetti()">Forgive me? ✨</button>
+    </div>
+
+    <script>
+        function throwConfetti() {
+            // Confetti explosion
+            confetti({
+                particleCount: 150,
+                spread: 100,
+                origin: { y: 0.6 },
+                colors: ['#ff69b4', '#ff85c2', '#ffffff'],
+                shapes: ['circle', 'heart']
+            });
+
+            // Change Capoo to happy version
+            document.getElementById('capoo').src = "https://media.giphy.com/media/KyEtlYiutRHVC68Ess/giphy.gif?cid=ecf05e47mzeueo9472029rn2cr6ef2jbiffcjk9mqjo094t3&ep=v1_gifs_related&rid=giphy.gif&ct=g";
+            
+            // Add floating hearts effect
+            const button = document.querySelector('button');
+            button.innerHTML = "You're My Sunshine! 🌞💕";
+            button.style.animation = "float 1.5s infinite";
+            
+            // Add background animation
+            document.body.style.background = "linear-gradient(45deg, #ffe6f0, #ffd1e6)";
+            alert("I love you! 💖");
+        }
+    </script>
+</body>
+</html>
